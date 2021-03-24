@@ -1,0 +1,81 @@
+
+@import 'Partials/config';
+
+//  Styles for header and footer
+@import 'Partials/header-footer';
+
+//  Styles for the previewer window
+@import 'Partials/previewer';
+
+//  Styles for the course editor window
+@import 'Partials/course-window';
+
+//  Styles for the settings window
+@import 'Partials/timetable-settings';
+
+
+
+:root {
+    --header-height: 110px;
+    --time-delete-button-size: 20px;
+    --large-screen-window-y-margin: 20px; 
+}
+
+html {
+    font-size: 10px;
+}
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+//==============================================================
+
+body {
+    background-color: $general-bg;
+}
+
+.blocker {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 999;
+    
+    pointer-events: none;
+    opacity: 0;
+
+    transition: opacity .5s ease;
+
+    &.blocking {
+        opacity: 1;
+        pointer-events: initial;
+    }
+}
+
+
+
+
+
+
+/* =======================================================================================
+    Scrollbar custom styled
+======================================================================================= */
+::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: rgba(255,255,255,.3);
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    width: 10%;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,1); 
+}
